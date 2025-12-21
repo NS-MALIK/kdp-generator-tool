@@ -76,10 +76,10 @@
 
             <ul class="resource-list">
                 <li>
-                    <strong><a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dbook%2520cover%2520design%26source%3Dtop-bar%26ref_ctx_id%3D77fb0a8e8d6a4a51bf9551f739a4e55a%26search_in%3Deverywhere%26search-autocomplete-original-term%3Dbook%2520cover%2520design" target="_blank" style="color:#5d58bd">1. Professional KDP Cover Design</a></strong> - *Increase your CTR for your <strong>low content book ideas</strong>.*
+                    <strong><a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dbook%2520cover%2520design%26source%3Dtop-bar%26ref_ctx_id%3D77fb0a8e8d6a4a51bf9551f739a4e55a%26search_in%3Deverywhere%26search-autocomplete-original-term%3Dbook%2520cover%2520design" target="_blank" class="accent-link-color">1. Professional KDP Cover Design</a></strong> - *Increase your CTR for your <strong>low content book ideas</strong>.*
                 </li>
                 <li>
-                    <strong><a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace" target="_blank" style="color:#5d58bd">2. Custom Interior Layout Experts</a></strong> - *Perfect for <strong>medium content kdp book ideas</strong> like workbooks.*
+                    <strong><a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace" target="_blank" class="accent-link-color">2. Custom Interior Layout Experts</a></strong> - *Perfect for <strong>medium content kdp book ideas</strong> like workbooks.*
                 </li>
             </ul>
 
@@ -97,9 +97,39 @@
             <div class="blog-card">
                 <h3>10 Profitable KDP Niches for 2025</h3>
                 <p>Learn how to use our <strong>KDP idea generator tool</strong> to find high-demand niches...</p>
-                <a href="/blog/low-content-book-ideas-2025" style="color:#5d58bd;">Read More</a>
+                <a href="/blog/low-content-book-ideas-2025" class="accent-link-color">Read More</a>
             </div>
         </div>
     </div>
 </section>
+<script>
+    // 1. Lazy Load reCAPTCHA
+    const nicheInput = document.getElementById('niche_input');
+    const loadRecaptcha = () => {
+        if (!window.grecaptcha) {
+            const script = document.createElement('script');
+            script.src = "https://www.google.com/recaptcha/api.js";
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+    };
+    nicheInput.addEventListener('focus', loadRecaptcha, { once: true });
+    nicheInput.addEventListener('keydown', loadRecaptcha, { once: true });
+
+    // 2. Copy Text Functionality (Place this AFTER)
+    function copyText(buttonElement) {
+        const ideaText = buttonElement.previousElementSibling.textContent;
+        navigator.clipboard.writeText(ideaText).then(() => {
+            const originalText = buttonElement.textContent;
+            buttonElement.textContent = 'COPIED!';
+            buttonElement.classList.add('copied-success');
+            setTimeout(() => {
+                buttonElement.textContent = originalText;
+                buttonElement.classList.remove('copied-success');
+            }, 1500);
+        });
+    }
+</script>
+
 {% endblock %}
