@@ -2,7 +2,7 @@
 import random
 import os
 import sys
-from turtle import home
+
 from flask import Flask, render_template, request,Response
 import requests
 # --- PATH CORRECTION FOR VERCEL ---
