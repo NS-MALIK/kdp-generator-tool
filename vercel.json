@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.py"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/ping-google",
+      "schedule": "0 0 * * *"
+    }
+  ],
+  
+}

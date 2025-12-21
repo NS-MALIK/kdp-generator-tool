@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}KDP Idea Generator Tool | Free Low Content Book Ideas for Amazon KDP{% endblock %}</title>
+    <meta name="description" content="Get unique KDP ideas and low content book ideas for Amazon KDP instantly. Use our free KDP niche ideas generator to find high-demand medium content KDP book ideas.">
+    <meta name="keywords" content="KDP idea generator tool, amazon kdp book ideas, kdp niche ideas, low content kdp ideas, free amazon kdp niche generator">
+    <link rel="canonical" href="https://kdp-generator-tool.vercel.app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kdp-generator-tool.vercel.app/">
+    <meta property="og:title" content="Free Amazon KDP Low-Content Idea & Niche Generator">
+    <meta property="og:description" content="Generate 15+ unique KDP book ideas in seconds. Stop wasting time on manual research; find your next Amazon KDP niche today.">
+    <meta property="og:image" content="{{ url_for('static', filename='og-image.jpg') }}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kdp-generator-tool.vercel.app/">
+    <meta property="twitter:title" content="KDP Idea Generator Tool - Free & Secure">
+    <meta property="twitter:description" content="The best tool for low content book ideas for Amazon KDP. Built for speed and niche accuracy.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='social-preview.jpg') }}">
+
+    <meta name="google-site-verification" content="xz8mCvndMbO5xFBzSjGIGFfc3-h5utMpCcWie6o2JLU" />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "KDP Idea Generator Tool",
+  "url": "https://kdp-generator-tool.vercel.app/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": "Low-content niche generation, KDP keyword research, Amazon KDP ideas"
+}
+</script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="/static/style.css"> {% block extra_css %}{% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+ <header>
+        <div class="container">
+            <span class="logo">KDP 💡 GENERATOR <span class="accent-text">V 2.1</span></span>
+            <nav aria-label="Main Navigation">
+                <a href="/">Tool</a>
+                <a href="/#affiliate-resources">Resources</a>
+                <a href="/#seo-guide">KDP Guide</a>
+                <a href="/blog">Blog</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="futuristic-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="logo">KDP 💡 <span class="accent-text">ALPHA</span></span>
+                <p class="footer-bio">
+                    Powered by Python & Secure DevSecOps protocols. Developed by <strong>Naila Malik</strong> and the <strong>Alpha Coder</strong> team.
+                </p>
+                <div class="footer-status"><span class="status-dot"></span> System Online & Secure</div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="/">KDP Generator</a></li>
+                    <li><a href="/about">Expert Bio</a></li>
+                    <li><a href="/contact">Business Inquiry</a></li>
+                    <li><a href="/privacy">Privacy & Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="footer-icon-row">
+                   <a href="https://www.linkedin.com/in/naila-malik00/" target="_blank" class="brand-icon li"><i class="fa-brands fa-linkedin-in"></i></a>
+                   <a href="https://github.com/NS-MALIK" target="_blank" class="brand-icon gh"><i class="fa-brands fa-github"></i></a>
+                   <a href="https://facebook.com/your-page" target="_blank" class="brand-icon fb"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <p class="footer-email">kdp@alphacoder.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 KDP Idea Generator. All Rights Reserved | Built with 🛡️ Security</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyText(buttonElement) {
+            const ideaText = buttonElement.previousElementSibling.textContent;
+            navigator.clipboard.writeText(ideaText).then(() => {
+                const originalText = buttonElement.textContent;
+                buttonElement.textContent = 'COPIED!';
+                buttonElement.classList.add('copied-success');
+                setTimeout(() => {
+                    buttonElement.textContent = originalText;
+                    buttonElement.classList.remove('copied-success');
+                }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>

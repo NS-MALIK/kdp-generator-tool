@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+{% block title %}Free Low Content Book Ideas for Amazon KDP | Idea Generator{% endblock %}
+{% block content %}
+     <main id="tool" class="main-tool">
+        <div class="container">
+            <h1>Free Amazon KDP Low-Content Idea & Niche Generator</h1>
+            <p class="subtitle">Looking for <strong>low content book ideas for Amazon KDP</strong>? Enter a niche below to generate unique, profitable book titles instantly.</p>
+
+            <form method="POST" action="/" class="tool-form">
+               
+                <div class="input-group">
+                    <label for="niche_input">Get Unique Amazon KDP Ideas:</label>
+                    {% if error %}
+    <p style="color: red; text-align: center;">{{ error }}</p>
+{% endif %}
+                    <input 
+                        type="text"
+                        list="niche-suggestions" 
+                        name="niche_input" 
+                        id="niche_input" 
+                        placeholder="Type 'Nursing', 'Gratitude', or your own niche..." 
+                        required
+                        class="futuristic-input"
+                    >
+                    <datalist id="niche-suggestions">
+                        {% for niche in niches %}
+                        <option value="{{ niche }}">
+                        {% endfor %}
+                    </datalist>
+                </div>
+                 <div class="g-recaptcha" data-sitekey="6LentjEsAAAAAGoL2IVM7N5KhhOwq2Gd-si2p9UQ" style="margin-bottom: 10px; display: flex; justify-content: center; margin-top:20px;"></div>
+                <button type="submit" class="cta-button pulse-effect">
+                    GENERATE KDP BOOK IDEAS
+                </button>
+            </form>
+
+            {% if ideas %}
+            <div class="results-container">
+                <h2 class="accent-text">Your Low Content KDP Ideas & Niche Results</h2>
+                <ul class="idea-list">
+                    {% for idea in ideas %}
+                    <li class="idea-item">
+                        <span>{{ idea }}</span>
+                        <button class="copy-button" onclick="copyText(this)">COPY</button>
+                    </li>
+                    {% endfor %}
+                </ul>
+               
+                <div class="fiverr-promo-wrapper">
+                    <a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dbook%2520cover%2520design%26source%3Dtop-bar%26ref_ctx_id%3D77fb0a8e8d6a4a51bf9551f739a4e55a%26search_in%3Deverywhere%26search-autocomplete-original-term%3Dbook%2520cover%2520design" target="_blank" class="fiverr-card">
+                        <div class="fiverr-content">
+                            <span class="fiverr-icon">🚀</span>
+                            <div class="fiverr-text">
+                                <span class="fiverr-heading">Validate Your KDP Book Ideas?</span>
+                                <span class="fiverr-subtext">Hire a Pro for Your Amazon KDP Cover & Interior on Fiverr!</span>
+                            </div>
+                        </div>
+                        <div class="fiverr-badge">GET STARTED</div>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <section id="seo-guide" class="seo-content">
+        <div class="container">
+            <h2>How to Use Our KDP Niche Finder for Profitable Amazon KDP Ideas</h2>
+            <p>Welcome to the ultimate <strong>KDP idea generator tool</strong>. Success in self-publishing requires more than just luck; it requires finding <strong>low content kdp ideas</strong> that actually have demand. Our tool helps you brainstorm <strong>ideas for low content books</strong> and <strong>medium content kdp book ideas</strong> by combining high-search volume modifiers with evergreen themes.</p>
+
+            <h3>The Secret to Amazon KDP Ideas that Sell</h3>
+            <p>To rank on Amazon, you need <strong>kdp niche ideas</strong> with low competition. Our generator provides you with <strong>low content book ideas for amazon kdp</strong> using a proven 3-part formula. Whether you are looking for <strong>kdp book ideas</strong> for planners, journals, or activity books, automation helps you scale faster than manual research.</p>
+            
+            <h2 id="affiliate-resources">Best Resources for Low Content Book Ideas</h2>
+            <p>Once you have found your <strong>amazon kdp ideas</strong>, the next step is high-quality production. *We recommend these expert services to help you launch your <strong>kdp low content book ideas</strong> into a profitable business.*</p>
+
+            <ul class="resource-list">
+                <li>
+                    <strong><a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dbook%2520cover%2520design%26source%3Dtop-bar%26ref_ctx_id%3D77fb0a8e8d6a4a51bf9551f739a4e55a%26search_in%3Deverywhere%26search-autocomplete-original-term%3Dbook%2520cover%2520design" target="_blank" style="color:#5d58bd">1. Professional KDP Cover Design</a></strong> - *Increase your CTR for your <strong>low content book ideas</strong>.*
+                </li>
+                <li>
+                    <strong><a href="https://go.fiverr.com/visit/?bta=847127&brand=fiverrmarketplace" target="_blank" style="color:#5d58bd">2. Custom Interior Layout Experts</a></strong> - *Perfect for <strong>medium content kdp book ideas</strong> like workbooks.*
+                </li>
+            </ul>
+
+            <div class="faq-seo" style="margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
+                <h3>KDP Idea Generation FAQ</h3>
+                <p><strong>What is the best kdp idea generator tool?<br></strong> Alpha Coder provides the most accurate and free <strong>amazon kdp ideas</strong> based on real niche modifiers.</p>
+                <p><strong>How do I find low content book ideas?<br></strong> Simply type a broad topic into our generator to receive 15+ <strong>low content kdp ideas</strong> instantly.</p>
+            </div>
+        </div>
+    </section>
+    <section class="recent-posts">
+    <div class="container">
+        <h2>Expert KDP Resources</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h3>10 Profitable KDP Niches for 2025</h3>
+                <p>Learn how to use our <strong>KDP idea generator tool</strong> to find high-demand niches...</p>
+                <a href="/blog/low-content-book-ideas-2025" style="color:#5d58bd;">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

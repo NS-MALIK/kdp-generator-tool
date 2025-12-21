@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /contact
+
+Sitemap: https://kdp-generator-tool.vercel.app/sitemap.xml
