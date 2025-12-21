@@ -11,6 +11,5 @@
       "path": "/api/cron/ping-google",
       "schedule": "0 0 * * *"
     }
-  ],
-  
+  ]
 }
