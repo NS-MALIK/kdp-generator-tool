@@ -73,6 +73,10 @@ def blog_home():
 def blog_post_one():
     # This matches the folder structure we planned earlier
     return render_template('blog/low-content-ideas-2025.html')
+
+@app.route('/blog/low-content-books-competition-level-2026')
+def blog_post_2026():
+    return render_template('low-content-books-competition-level-2026.html')
 @app.route('/', methods=['GET', 'POST'])
 def index():
     generated_ideas = []
