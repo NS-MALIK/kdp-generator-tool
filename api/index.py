@@ -7,6 +7,7 @@ from flask import Flask, render_template, request,Response
 import requests
 # --- PATH CORRECTION FOR VERCEL ---
 # This adds the root directory to the Python path so it can find data.py
+# --- PATH CORRECTION FOR VERCEL ---
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Now we can safely import from the root directory
@@ -17,7 +18,17 @@ template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'te
 static_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static'))
 
 app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+class VercelPathFixMiddleware:
+    def __init__(self, app):
+        self.app = app
 
+    def __call__(self, environ, start_response):
+        path_info = environ.get('PATH_INFO', '')
+        if path_info.startswith('/api/index.py'):
+            environ['PATH_INFO'] = path_info.replace('/api/index.py', '') or '/'
+        return self.app(environ, start_response)
+
+app.wsgi_app = VercelPathFixMiddleware(app.wsgi_app)
 @app.route('/sitemap.xml')
 def sitemap():
     # Ensure the XML is served with the correct header
